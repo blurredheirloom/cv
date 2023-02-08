@@ -11,7 +11,7 @@
   --text-color-light: #707070;
   --container-color: #212121;
   --container-color-alt: #181616;
-  --body-color: #111; /*2b2b2b*/
+  --body-color: #111;
   --section-color: #03A9F4;
 
   /*========== Font and typography ==========*/
@@ -155,6 +155,20 @@ a:hover{
 img{
   max-width: 100%;
   height: auto;
+}
+
+::-webkit-scrollbar {
+  width: .5rem;
+  background-color: var(--container-color-alt);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 1px;
+  background-color: var(--container-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: white;
 }
 
 /*========== CLASS CSS ==========*/
