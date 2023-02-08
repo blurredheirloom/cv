@@ -649,6 +649,18 @@ img{
     display: none;
   }
 
+  .home__title{
+    text-align: center;
+  }
+
+  .home__img{
+    margin: 0 auto;
+  }
+
+  .social__container{
+    display: flex;
+    justify-content: space-evenly;
+  }
 }
 
 /* Classes modified for large screen size */
