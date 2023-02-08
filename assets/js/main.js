@@ -56,6 +56,7 @@ window.addEventListener('scroll', scrollTop)
 
 $(document).ready(
     function(){
+        $('.hidden').toggle();
         $('.code-toolbar').toggle();
 
         var r = Math.floor(Math.random()*5);
