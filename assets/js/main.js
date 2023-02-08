@@ -56,37 +56,31 @@ window.addEventListener('scroll', scrollTop)
 
 $(document).ready(
     function(){
+        $('.code-toolbar').toggle();
+
         var r = Math.floor(Math.random()*5);
-        $("code").toggle();
         switch (r) {
             case 0:
-                $("#hello").attr("class", "language-c");
-                $(".code-c").toggle();
+                $(".language-c").parent(".code-toolbar").toggle();
             break;
             case 1:
-                $("#hello").attr("class", "language-java");
-                $(".code-java").toggle();
+                $(".language-java").parent(".code-toolbar").toggle();
             break;
             case 2:
-                $("#hello").attr("class", "language-python");
-                $(".code-python").toggle();
+                $(".language-python").parent(".code-toolbar").toggle();
             break;
             case 3:
-                $("#hello").attr("class", "language-php");
-                $(".code-php").toggle();
+                $(".language-cpp").parent(".code-toolbar").toggle();
             break;
             case 4:
-                $("#hello").attr("class", "language-cpp");
-                $(".code-cpp").toggle();
+                $(".language-php").parent(".code-toolbar").toggle();
             break;
             default:
-                $("#hello").attr("class", "language-c");
-                $(".code-c").toggle();
+                $(".language-c").parent(".code-toolbar").toggle();
             break;
         }
 
 
-        $('.hidden').toggle();
         $('.dropdown .end').toggle();
         $(".experience .show-more").click(function () {
             $(".experience .hidden").fadeToggle();
