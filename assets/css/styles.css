@@ -490,27 +490,28 @@ img{
 }
 
 .time{
-  color: #707070;
+  color: var(--text-color-light);
   font-size: var(--small-font-size);
-  margin-top: 0.3rem;
 }
 
 .duration{
   display: flex;
   align-items: center;
-  font-size: var(--smaller-font-size);
+  font-size: var(--small-font-size);
   text-transform: uppercase;
 }
 
-.duration i{
-  font-size: var(--smaller-font-size);
+.duration span i{
+  font-size: var(--small-font-size);
   margin-right: 5px;
   margin-left: 10px;
 }
 
-.duration .time{
-  margin-top: 0;
+.duration .hour{
+  color: var(--text-color);
+  align-self: flex-end;
 }
+
 
 /*========== SKILLS AND LANGUAGES ==========*/
 .skills__content{
@@ -519,6 +520,7 @@ img{
 
 .languages__content{
   grid-template-columns: repeat(3, 1fr);
+  align-items: center;
 }
 
 .skills__content{
@@ -639,6 +641,11 @@ img{
     list-style: none;
   }
 
+  .duration {
+    flex-direction: column;
+    line-height: 1.5rem;
+  }
+
   .nav__link{
     flex-direction: row;
     justify-content: space-between;
@@ -660,6 +667,11 @@ img{
   .social__container{
     display: flex;
     justify-content: space-evenly;
+  }
+
+  .languages__content{
+    display: flex;
+    justify-content: center;
   }
 }
 
