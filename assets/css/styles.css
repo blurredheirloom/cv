@@ -730,19 +730,10 @@ img{
 
   code{
     display: none;
-    padding-top: 1rem;
   }
 
-  code.visible{
-    display: block;
-  }
   
   div.code-toolbar > .toolbar {
-    opacity: 1 !important;
-    margin-right: 5px;
-  }
-
-  div.code-toolbar > .toolbar > .toolbar-item > span{
-    border-radius: 3px !important;
+    display: none;
   }
 }

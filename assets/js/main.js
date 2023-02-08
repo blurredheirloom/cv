@@ -53,40 +53,39 @@ function scrollTop(){
 }
 window.addEventListener('scroll', scrollTop)
 
-var element = document.getElementById("hello");
-var r = Math.floor(Math.random()*5);
-element.childNodes.forEach(x => x.classList = "")
-
-switch (r) {
-    case 0:
-        element.classList = "language-c";
-        element.querySelector(':nth-child(1)').classList.add("visible");
-    break;
-    case 1:
-        element.classList = "language-java";
-        element.querySelector(':nth-child(2)').classList.add("visible");
-    break;
-    case 2:
-        element.classList = "language-python";
-        element.querySelector(':nth-child(3)').classList.add("visible");
-    break;
-    case 3:
-        element.classList = "language-cpp";
-        element.querySelector(':nth-child(4)').classList.add("visible");
-    break;
-    case 4:
-        element.classList = "language-php";
-        element.querySelector(':nth-child(5)').classList.add("visible");
-    break;
-    default:
-        element.classList = "language-c";
-        element.querySelector(':nth-child(1)').classList.add("visible");
-    break;
-}
-
 
 $(document).ready(
     function(){
+        var r = Math.floor(Math.random()*5);
+        $("code").toggle();
+        switch (r) {
+            case 0:
+                $("#hello").attr("class", "language-c");
+                $(".code-c").toggle();
+            break;
+            case 1:
+                $("#hello").attr("class", "language-java");
+                $(".code-java").toggle();
+            break;
+            case 2:
+                $("#hello").attr("class", "language-python");
+                $(".code-python").toggle();
+            break;
+            case 3:
+                $("#hello").attr("class", "language-php");
+                $(".code-php").toggle();
+            break;
+            case 4:
+                $("#hello").attr("class", "language-cpp");
+                $(".code-cpp").toggle();
+            break;
+            default:
+                $("#hello").attr("class", "language-c");
+                $(".code-c").toggle();
+            break;
+        }
+
+
         $('.hidden').toggle();
         $('.dropdown .end').toggle();
         $(".experience .show-more").click(function () {
