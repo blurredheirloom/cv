@@ -103,29 +103,35 @@ $(document).ready(
 });
 
 
+const themeButton = document.getElementById('theme-button');
+let darkTheme = 'dark';
+let lightTheme = 'light';
+let darkMode = localStorage.getItem("dark-mode");
 
-/*==================== REDUCE THE SIZE AND PRINT ON AN A4 SHEET ====================*/ 
+function enableDarkMode() {
+    document.body.classList.add(darkTheme);
+    document.body.classList.remove(lightTheme);
+   themeButton.classList.remove("bx-moon");
+	themeButton.classList.add("bx-sun");
+    localStorage.setItem("dark-mode", "enabled");
+};
+
+function disableDarkMode() {
+    document.body.classList.remove(darkTheme);
+    document.body.classList.add(lightTheme);
+	themeButton.classList.remove("bx-sun");
+	themeButton.classList.add("bx-moon");
+    localStorage.setItem("dark-mode", "disabled");
+};
+
+enableDarkMode();
 
 
-/*==================== REMOVE THE SIZE WHEN THE CV IS DOWNLOADED ====================*/ 
-
-
-/*==================== GENERATE PDF ====================*/ 
-// PDF generated area
-
-
-// Html2pdf options
-
-
-// Function to call areaCv and Html2Pdf options 
-
-
-// When the button is clicked, it executes the three functions
-
-    // 1. The class .scale-cv is added to the body, where it reduces the size of the elements
-
-
-    // 2. The PDF is generated
-
-
-    // 3. The .scale-cv class is removed from the body after 5 seconds to return to normal size.
+themeButton.addEventListener("click", () => {
+    darkMode = localStorage.getItem("dark-mode");
+    if (darkMode === "disabled") {
+        enableDarkMode();
+    } else {
+        disableDarkMode();
+    }
+});
